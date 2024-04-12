@@ -51,7 +51,7 @@ export abstract class DioAccount {
         this.setBalance(newBalance);
         console.log('Valor retirado com sucesso!')
       }catch(err){
-        console.log(err)
+        console.log(`${err}`)
       }
     }
   }
@@ -60,7 +60,7 @@ export abstract class DioAccount {
     if(this.validateStatus()){
       return console.log(`
         Olá! ${this.getName()}, 
-        Sua conta ${this.getAccountNumber()} possui o saldo de: R$${this.getBalance()} }
+        Sua conta ${this.getAccountNumber()} possui o saldo de: R$${this.getBalance()}
       `)
     }
   }

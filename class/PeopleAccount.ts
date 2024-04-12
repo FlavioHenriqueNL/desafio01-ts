@@ -1,8 +1,12 @@
 import { DioAccount } from "./DioAccount"
 
 export class PeopleAccount extends DioAccount {
-  doc_id: number
+  private readonly doc_id: number
 
+  getDoc = ():number => {
+    return this.doc_id
+  }
+  
   constructor(doc_id: number, name: string, accountNumber: number){
     super(name, accountNumber)
     this.doc_id = doc_id
