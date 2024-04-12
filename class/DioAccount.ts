@@ -1,5 +1,5 @@
 export abstract class DioAccount {
-  private name: string
+  private readonly name: string
   private readonly accountNumber: number
   private balance: number = 0
   private status: boolean = true
@@ -9,14 +9,12 @@ export abstract class DioAccount {
     this.accountNumber = accountNumber
   }
 
-  setName = (name: string): void => {
-    this.name = name
-    console.log('Nome alterado com sucesso!')
-  }
   getName = (): string => {
     return this.name
   }
-
+  getAccountNumber = (): number => {
+    return this.accountNumber
+  }
   getBalance = (): number => {
     return this.balance
   }
@@ -43,7 +41,6 @@ export abstract class DioAccount {
       return console.log("Valor depositado com sucesso.")
     }
   }
-
   withdraw = (value: number): void => {
     if(this.validateStatus()){
       try{
@@ -56,6 +53,15 @@ export abstract class DioAccount {
       }catch(err){
         console.log(err)
       }
+    }
+  }
+
+  visualizeAccount = ():void =>{
+    if(this.validateStatus()){
+      return console.log(`
+        Olá! ${this.getName()}, 
+        Sua conta ${this.getAccountNumber()} possui o saldo de: R$${this.getBalance()} }
+      `)
     }
   }
 }
