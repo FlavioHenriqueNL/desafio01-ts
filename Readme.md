@@ -1,6 +1,6 @@
 # Desenvolvendo o Dio Bank
 Desenvolvido por [Nathally Souza](https://github.com/nathyts)
-E resolvido por Flávio Henrique [Flávio Henrique](https://github.com/FlavioHenriqueNL)
+E resolvido por [Flávio Henrique](https://github.com/FlavioHenriqueNL)
 
 #### Projeto desenvolvido com conceitos básicos de typescript
 
