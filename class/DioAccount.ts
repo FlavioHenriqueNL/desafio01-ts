@@ -18,6 +18,8 @@ export abstract class DioAccount {
     return this.name
   }
 
+ 
+
   deposit = (value: number): void => {
     if(this.validateStatus()){
       this.balance += value
